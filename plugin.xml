@@ -6,15 +6,15 @@
 	</description>
   <license>MIT</license>
   <engines>
-    <engine name="cordova" version=">=6.4.0"/>
-    <engine name="cordova-android" version=">=6.0.0"/>
+    <engine name="cordova" version=">=7.0.0"/>
+    <engine name="cordova-android" version=">=7.0.0"/>
   </engines>
   <preference name="BACKUP" default="false"/>
   <platform name="android">
     <edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
       <manifest xmlns:tools="http://schemas.android.com/tools"/>
     </edit-config>
-    <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+    <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
       <application android:allowBackup="$BACKUP" tools:replace="android:allowBackup"/>
     </edit-config>
   </platform>
