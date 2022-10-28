@@ -14,13 +14,5 @@
 		<engine name="cordova-android" version=">=7.0.0"/>
 	</engines>
 	<preference name="BACKUP" default="false"/>
-	<platform name = "android">
-		<edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
-			<manifest
-				xmlns:tools="http://schemas.android.com/tools"/>
-		</edit-config>
-		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-				<application tools:replace="android:allowBackup" android:allowBackup="$BACKUP"/>
-		</edit-config>
-	</platform>
+	
 </plugin>
