@@ -15,4 +15,8 @@
 	</engines>
 	<preference name="BACKUP" default="false"/>
 	
+	<platform name="android">
+   		<hook type="after_prepare" src="hooks/before_plugin_install/androidBeforeInstall.js" />
+	</platform>
+	
 </plugin>
