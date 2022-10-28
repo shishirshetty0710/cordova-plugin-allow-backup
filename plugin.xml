@@ -10,13 +10,7 @@
     <engine name="cordova-android" version=">=7.0.0"/>
   </engines>
    <preference name="BACKUP" default="false"/>
-  <platform name="android">
-    
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:allowBackup="false"/>
-    </edit-config>	  
-	  
-  </platform>
+  
 </plugin>
 
 
