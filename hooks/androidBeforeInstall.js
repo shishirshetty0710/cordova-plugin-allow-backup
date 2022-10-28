@@ -9,6 +9,8 @@ module.exports = function(ctx) {
     throw new Error(manifestPath + ' has incorrect root node name (expected "manifest")');
  }
 
+ doc.getRoot().find('./manifest').attrib['xmlns:tools'] ="http://schemas.android.com/tools";
+ doc.getroot().find('./application').attrib['tools:replace'] = "android:allowBackup";
  doc.getroot().find('./application').attrib['android:allowBackup'] = "true";
 
  //write the manifest file
