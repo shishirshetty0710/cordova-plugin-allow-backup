@@ -10,7 +10,7 @@ module.exports = function(ctx) {
             throw new Error('Unable to find AndroidManifest.xml: ' + err);
          }
             let replace = "<manifest ";
-            let replace_with = "<manifest xmlns:tools=\"http://schemas.android.com/tools\"";
+            let replace_with = "<manifest xmlns:tools=\"http://schemas.android.com/tools\" ";
             let result = data.replace(replace, replace_with);
             console.log(data);
             fs.writeFile(manifestPath, result, 'utf8', function(err) {
