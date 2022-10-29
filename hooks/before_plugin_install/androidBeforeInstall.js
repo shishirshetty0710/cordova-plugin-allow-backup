@@ -9,8 +9,8 @@ module.exports = function(ctx) {
          if (err) {
             throw new Error('Unable to find AndroidManifest.xml: ' + err);
          }
-            let replace = "manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"";
-            let replace_with = "manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:tools=\"http://schemas.android.com/tools\"";
+            let replace = "<manifest ";
+            let replace_with = "<manifest xmlns:tools=\"http://schemas.android.com/tools\"";
             let result = data.replace(replace, replace_with);
             console.log(data);
             fs.writeFile(manifestPath, result, 'utf8', function(err) {
